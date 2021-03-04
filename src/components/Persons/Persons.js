@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+
 import Person from './Person/Person';
 
 
@@ -45,10 +46,11 @@ class Persons extends PureComponent{
             age={person.age} 
             key={person.id}
             change={(e) => this.props.changed(e, person.id)} 
+            isAuth={this.props.isAuthenticated}
             />
       });
     };
 }
         
 
-  export default Persons;
+export default Persons;
